@@ -102,7 +102,7 @@ Material:
     - _Glossiness: 0
     - _GlossinessSource: 0
     - _GlossyReflections: 0
-    - _HighIntensity: 1.9
+    - _HighIntensity: 3.77
     - _LightScalar: 0.92
     - _LowIntensity: 1.95
     - _Metallic: 0
@@ -131,9 +131,9 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.67, g: 0.67, b: 0.67, a: 1}
-    - _HighColor: {r: 1, g: 1, b: 1, a: 1}
-    - _LowColor: {r: 0.8117647, g: 0.14901957, b: 0.4470588, a: 1}
-    - _OutlineColor: {r: 0.8117647, g: 0.14901957, b: 0.4470588, a: 1}
+    - _HighColor: {r: 0.42352945, g: 0.98823535, b: 0.98823535, a: 1}
+    - _LowColor: {r: 0.88235295, g: 0.35294116, b: 0.5921568, a: 1}
+    - _OutlineColor: {r: 0.88235295, g: 0.35294116, b: 0.5921568, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

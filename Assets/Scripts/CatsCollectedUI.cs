@@ -6,7 +6,7 @@ using TMPro;
 
 public class CatsCollectedUI : MonoBehaviour
 {
-    TextMeshProUGUI catCounterText;
+    [HideInInspector] public TextMeshProUGUI catCounterText;
     public int catCounter;
 
     void Start()

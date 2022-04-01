@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControllBall : MonoBehaviour
 {
     public CharacterController player;
+    //PlayerController playerController;
     public Transform playerForwardPos;
     //Vector3 playerOffset;
     Vector3 lastPosition;
@@ -17,6 +18,7 @@ public class ControllBall : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //playerController = player.GetComponent<PlayerController>();
         lastPosition = new Vector3();
         //playerOffset = new Vector3(player.transform.position.x + maxDistancefromPlayer, 0f , player.transform.position.z + maxDistancefromPlayer);
     }
@@ -44,11 +46,21 @@ public class ControllBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cat"))
         {
-            collision.transform.parent = transform;
+            collision.transform.parent.parent = transform;
             
 
             catsCollectedUI.IncreaseCatCounter();
             collision.transform.tag = "Collected";
+            collision.transform.parent.tag = "Collected";
+            collision.transform.GetComponent<Rigidbody>().useGravity = false;
+            collision.transform.GetComponent<Rigidbody>().isKinematic = true;
+
+            //foreach (GameObject child in collision.transform.parent)
+            //{
+            //    child.GetComponent<Collider>().enabled = false;
+            //}
+
+            collision.transform.GetComponent<Collider>().enabled = false;
         }
     }
 }

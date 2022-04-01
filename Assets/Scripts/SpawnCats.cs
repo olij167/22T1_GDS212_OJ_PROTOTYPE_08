@@ -7,9 +7,11 @@ public class SpawnCats : MonoBehaviour
 {
     public GameObject catPrefab;
     public int respawnCatsAtNum, maxCatNum; 
-    int catNumToSpawn, catsInSceneCount;
+    [HideInInspector] public int catNumToSpawn, catsInSceneCount;
 
     Vector3 spawnPos;
+
+    public ReturnTrigger returnTrigger;
 
     void Start()
     {
@@ -23,20 +25,28 @@ public class SpawnCats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (catsInSceneCount == respawnCatsAtNum)
-        {
-            catNumToSpawn = maxCatNum - catsInSceneCount;
-            SpawnNewCats();
-        }
+        
     }
 
     public void SpawnNewCats()
     {
-        for (int i = 0; i < catNumToSpawn; i++)
+
+        catsInSceneCount = GameObject.FindGameObjectsWithTag("Cat").Length;
+        catNumToSpawn = maxCatNum - catsInSceneCount;
+
+        if (returnTrigger.maxCatsReturned >= returnTrigger.catsReturnedCounter + catNumToSpawn)
         {
-            spawnPos = GenerateRandomWayPoint();
-            GameObject newCat = Instantiate(catPrefab, spawnPos, Quaternion.identity);
+
+            for (int i = 0; i < catNumToSpawn; i++)
+            {
+                spawnPos = GenerateRandomWayPoint();
+                GameObject newCat = Instantiate(catPrefab, spawnPos, Quaternion.identity);
+            }
         }
+
+        catsInSceneCount = GameObject.FindGameObjectsWithTag("Cat").Length;
+
+        //Debug.Log(catNumToSpawn + " New Cats Spawned, " + catsInSceneCount + " Cats in Scene");
     }
 
 

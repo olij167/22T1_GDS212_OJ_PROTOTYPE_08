@@ -75,7 +75,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HighIntensity: 3.77
-    - _LightScalar: 3.32
+    - _LightScalar: 1
     - _LowIntensity: 1.95
     - _Metallic: 0
     - _Mode: 0
@@ -95,7 +95,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.67, g: 0.67, b: 0.67, a: 1}
-    - _HighColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HighColor: {r: 0.5098039, g: 0.98039216, b: 0.98039216, a: 1}
     - _LowColor: {r: 0, g: 0, b: 0.24705878, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0.24705878, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}

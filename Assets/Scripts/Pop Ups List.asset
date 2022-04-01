@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f88449fdbda0f40b92fb4cdd84c795, type: 3}
+  m_Name: Pop Ups List
+  m_EditorClassIdentifier: 
+  PopUpsList:
+  - Good Job
+  - Well Done!
+  - Keep It Up!
+  - Love your work
+  - Couldn't have done it better myself
+  - Absolute Mad Lad
+  - absolute mad lad
