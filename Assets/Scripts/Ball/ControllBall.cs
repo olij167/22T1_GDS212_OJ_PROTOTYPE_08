@@ -35,7 +35,7 @@ public class ControllBall : MonoBehaviour
 
         if (Vector3.Distance(player.transform.position, transform.position) > maxDistancefromPlayer)
         {
-            transform.position = new Vector3(playerForwardPos.position.x, transform.position.y, playerForwardPos.position.z);
+            transform.position = new Vector3(playerForwardPos.position.x, playerForwardPos.transform.position.y, playerForwardPos.position.z);
             //player.transform.forward;
         }
 

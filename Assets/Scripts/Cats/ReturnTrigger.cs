@@ -7,8 +7,9 @@ public class ReturnTrigger : MonoBehaviour
 {
     public ControllBall ball;
     CatsCollectedUI catsCollectedUI;
-    public int catsReturnedCounter, catsRequiredForUpgrade = 50, currentLevel = 1;
-    [HideInInspector] public int maxCatsReturned = 100000;
+    public CatsReturnedCounter catsReturnedCounter;
+    public int catsRequiredForUpgrade = 50, currentLevel = 1;
+    public int maxCatsReturned = 100000;
 
     public float upgradeSizeIncrease;
 
@@ -31,7 +32,7 @@ public class ReturnTrigger : MonoBehaviour
     {
         catsCollectedUI = ball.catsCollectedUI;
 
-        catsReturnedText.text = "Cats Returned: " + catsReturnedCounter.ToString();
+        catsReturnedText.text = "Cats Returned: " + catsReturnedCounter.catsReturned.ToString();
 
         //popUpText.enabled = false;
         popUpUI.SetActive(false);
@@ -74,9 +75,9 @@ public class ReturnTrigger : MonoBehaviour
             spawnCats.SpawnNewCats();
         }
 
-        if (catsReturnedCounter >= catsRequiredForUpgrade)
+        if (catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
         {
-            magnetField.GetComponent<CatMagnet>().magnetRadius = Mathf.Log10(catsReturnedCounter);
+            magnetField.GetComponent<CatMagnet>().magnetRadius = Mathf.Log10(catsReturnedCounter.catsReturned);
             //magnetField.radius = Mathf.Sqrt((Mathf.PI + catsOnBall) / (4 * Mathf.PI));
 
             catsRequiredForUpgrade *= 2;
@@ -91,15 +92,15 @@ public class ReturnTrigger : MonoBehaviour
     public void ReturnCats()
     {
         
-        catsReturnedCounter += catsCollectedUI.catCounter;
-
+        catsReturnedCounter.catsReturned += catsCollectedUI.catCounter;
+        SaveSystem.Save(catsReturnedCounter);
 
         catsCollectedUI.catCounter = 0;
 
         catsCollectedUI.catCounterText.text = "Cats Collected: " + catsCollectedUI.catCounter.ToString();
 
 
-        catsReturnedText.text = "Cats Returned: " + catsReturnedCounter.ToString();
+        catsReturnedText.text = "Cats Returned: " + catsReturnedCounter.catsReturned.ToString();
 
         if (tutorial.tutorialComplete)
         {
@@ -124,7 +125,7 @@ public class ReturnTrigger : MonoBehaviour
 
         }
 
-        if (catsReturnedCounter >= maxCatsReturned)
+        if (catsReturnedCounter.catsReturned >= maxCatsReturned)
         {
             Camera.main.transform.LookAt(ball.transform);
             gameUI.SetActive(false);

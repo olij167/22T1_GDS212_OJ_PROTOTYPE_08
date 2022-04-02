@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using TMPro;
 
 public class CatMagnet : MonoBehaviour
 {
@@ -15,6 +15,8 @@ public class CatMagnet : MonoBehaviour
 
     SphereCollider magnetField;
     public float magnetRadius;
+
+    public TextMeshProUGUI baseMagnetText, collectedModifierText, totalMagnetRangeText;
     void Start()
     {
         attractedCatsList = new List<Rigidbody>();
@@ -34,6 +36,10 @@ public class CatMagnet : MonoBehaviour
             
             attractedCatsList[i].velocity = (transform.position - (attractedCatsList[i].transform.position + attractedCatsList[i].centerOfMass)) * magnetForce * Time.deltaTime;
         }
+
+        baseMagnetText.text = "Base Lure Range: " + magnetRadius.ToString("0.00");
+        collectedModifierText.text = "Collected Cats Lure Modifier: " + (magnetField.radius - magnetRadius).ToString("0.00");
+        totalMagnetRangeText.text = "Total Lure Range: " + magnetField.radius.ToString("0.00");
     }
 
     private void OnTriggerEnter(Collider other)
