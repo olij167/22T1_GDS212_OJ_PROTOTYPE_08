@@ -11,7 +11,7 @@ public class TutorialUIController : MonoBehaviour
     public TextMeshProUGUI tutorialInstructionsText;
     
     public List<TutorialUI> tutorialUIList;
-    public int count = -1;
+    public int count = 0;
 
     public bool tutorialComplete, inputPerformed;
 
@@ -46,12 +46,14 @@ public class TutorialUIController : MonoBehaviour
             foreach (TutorialUI tutorialUI in tutorialUIList)
             {
                 tutorialUI.tutorialStepComplete = false;
-                tutorialInstructionsText.enabled = false;
-                tutorialPanel.SetActive(false);
+                //tutorialInstructionsText.enabled = false;
+                
 
             }
+            count = 0;
 
-            enabled = false;
+            tutorialPanel.SetActive(false);
+            //enabled = false;
             //gameObject.SetActive(false);
             
         }

@@ -9,10 +9,11 @@ public class ButtonFunctions : MonoBehaviour
     UnityEvent enablePauseEvent, disablePauseEvent;
     
     public string mainMenu;
-    public GameObject pauseMenu;
+    public GameObject pauseMenu, replayTutorialButton, tutorialPanel;
     public CharacterController player;
     public CamController camController;
     public CatsReturnedCounter catsReturnedCounter;
+    public TutorialUIController tutorial;
 
     void Start()
     {
@@ -49,6 +50,12 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!pauseMenu.activeSelf)
         {
+            if (tutorial.tutorialComplete)
+            {
+                replayTutorialButton.SetActive(true);
+            }
+            else replayTutorialButton.SetActive(false);
+
             player.enabled = false;
             camController.enabled = false;
             Time.timeScale = 0f;
@@ -66,6 +73,13 @@ public class ButtonFunctions : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             pauseMenu.SetActive(false);
         }
+    }
+
+    public void ReplayTutorial()
+    {
+        tutorialPanel.SetActive(true);
+        tutorial.tutorialComplete = false;
+        replayTutorialButton.SetActive(false);
     }
 
     public void SaveGame()

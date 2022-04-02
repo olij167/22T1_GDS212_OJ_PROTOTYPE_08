@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class MainMenuButtons : MonoBehaviour
+public class MainMenuFunctions : MonoBehaviour
 {
     public string gameScene;
     public CatsReturnedCounter catsReturnedCounter;
 
+    public TextMeshProUGUI catsToCollectText, currentLevelText;
+
+    public int maxCats = 100000;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
+
+        catsToCollectText.text = (maxCats - catsReturnedCounter.catsReturned).ToString() + " of them!";
+        //currentLevelText.text = "Level " + currentLevel.ToString();
     }
 
     public void SaveGame()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 488476854528607218}
   - component: {fileID: 6197040988423671855}
   - component: {fileID: 2928824135927231229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8318092603165362861}
   - component: {fileID: 9043902686685650103}
   - component: {fileID: 2455221076942399682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Ears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 2046236769614099251}
   - component: {fileID: 6640153401548770303}
   - component: {fileID: 4626003735972087741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Ears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 7030151400045003596}
   - component: {fileID: 2471941255321178122}
   - component: {fileID: 7788904489778609712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 5329109682266118153}
   - component: {fileID: 3050593199487028861}
   - component: {fileID: 5068505241048316730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 8960457437790898532}
   - component: {fileID: 4171159876907386900}
   - component: {fileID: 6882617855060773188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 8665983749069444919}
   - component: {fileID: 5012140681213014437}
   - component: {fileID: 381554889616625559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 5864769351171993064}
   - component: {fileID: 1030949844669089722}
   - component: {fileID: 2834898197129066188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 4224347054652325557}
   - component: {fileID: 1028060457089288834}
   - component: {fileID: 3863697265974095201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cat Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 5305391743276379493}
   - component: {fileID: 701806756660811293}
   - component: {fileID: 1305087032370389726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
