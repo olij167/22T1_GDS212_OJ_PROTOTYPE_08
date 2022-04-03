@@ -46,7 +46,7 @@ public class SpawnCats : MonoBehaviour
         for (int i = 0; i < catNumToSpawn; i++)
         {
             spawnPos = GenerateRandomWayPoint();
-            GameObject newCat = Instantiate(catPrefab, spawnPos, Quaternion.identity);
+            GameObject newCat = Instantiate(catPrefab, spawnPos, Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)));
         }
 
         catsInSceneCount = GameObject.FindGameObjectsWithTag("Cat").Length;

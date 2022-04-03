@@ -27,6 +27,12 @@ public class ReturnTrigger : MonoBehaviour
     public PopUps popUps;
     public GameObject popUpUI;
 
+    public ParticleSystem fireWorks;
+
+    AudioSource levelUpAudioSource;
+
+    public AudioClip levelUpSound;
+
 
     void Start()
     {
@@ -36,6 +42,8 @@ public class ReturnTrigger : MonoBehaviour
 
         //popUpText.enabled = false;
         popUpUI.SetActive(false);
+
+        levelUpAudioSource = gameObject.GetComponent<AudioSource>();
 
 
         nextUpgradeText.text = "Next Level when " + catsRequiredForUpgrade.ToString() + " cats have been returned";
@@ -83,6 +91,8 @@ public class ReturnTrigger : MonoBehaviour
             catsRequiredForUpgrade *= 2;
 
             currentLevel++;
+            fireWorks.Play();
+            levelUpAudioSource.PlayOneShot(levelUpSound);
             levelText.text = "Level " + currentLevel.ToString();
 
             nextUpgradeText.text = "Next Upgrade at " + catsRequiredForUpgrade.ToString() + " Cats Returned";

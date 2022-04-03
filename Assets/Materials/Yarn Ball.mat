@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
         m_Texture: {fileID: 2800000, guid: f64eb2e747be2ad439b77fded6cdd261, type: 3}
-        m_Scale: {x: 3.94, y: 3.64}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -74,8 +74,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HighIntensity: 3.77
-    - _LightScalar: 1
+    - _HighIntensity: 2
+    - _LightScalar: 0.79
     - _LowIntensity: 1.95
     - _Metallic: 0
     - _Mode: 0
@@ -95,7 +95,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.67, g: 0.67, b: 0.67, a: 1}
-    - _HighColor: {r: 0.5098039, g: 0.98039216, b: 0.98039216, a: 1}
+    - _HighColor: {r: 0.42352945, g: 0.98823535, b: 0.98823535, a: 1}
     - _LowColor: {r: 0, g: 0, b: 0.24705878, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0.24705878, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: NarrativeTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: Uh Oh! Who let the cats out?! All your cats have escaped!
+  tutorialInstructions: Uh Oh! The cats are loose! You better catch them for a better
+    home!
   tutorialStepComplete: 1
   isLookAroundTutorial: 0
   tutorialInputList: 

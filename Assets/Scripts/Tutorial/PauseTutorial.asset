@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PauseTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: To Check this press Escape
-  tutorialStepComplete: 1
+  tutorialInstructions: View your range and pause by pressing Escape
+  tutorialStepComplete: 0
   isLookAroundTutorial: 0
   tutorialInputList: 

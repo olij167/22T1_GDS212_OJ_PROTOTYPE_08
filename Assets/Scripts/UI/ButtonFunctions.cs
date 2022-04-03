@@ -78,6 +78,8 @@ public class ButtonFunctions : MonoBehaviour
     public void ReplayTutorial()
     {
         tutorialPanel.SetActive(true);
+        tutorial.count = 0;
+
         tutorial.tutorialComplete = false;
         replayTutorialButton.SetActive(false);
     }

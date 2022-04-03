@@ -24,7 +24,7 @@ public class CatMagnet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         catsOnBall = ball.transform.childCount - 1;
 
@@ -39,7 +39,7 @@ public class CatMagnet : MonoBehaviour
 
         baseMagnetText.text = "Base Lure Range: " + magnetRadius.ToString("0.00");
         collectedModifierText.text = "Collected Cats Lure Modifier: " + (magnetField.radius - magnetRadius).ToString("0.00");
-        totalMagnetRangeText.text = "Total Lure Range: " + magnetField.radius.ToString("0.00");
+        totalMagnetRangeText.text = "Lure Range: " + magnetField.radius.ToString("0.00");
     }
 
     private void OnTriggerEnter(Collider other)

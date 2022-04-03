@@ -15,11 +15,16 @@ public class ControllBall : MonoBehaviour
     public float maxDistancefromPlayer;
 
     public CatsCollectedUI catsCollectedUI;
+
+    AudioSource catSoundSource;
+
+    public List<AudioClip> catSounds;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         //playerController = player.GetComponent<PlayerController>();
         lastPosition = new Vector3();
+        catSoundSource = gameObject.GetComponent<AudioSource>();
         //playerOffset = new Vector3(player.transform.position.x + maxDistancefromPlayer, 0f , player.transform.position.z + maxDistancefromPlayer);
     }
 
@@ -54,6 +59,8 @@ public class ControllBall : MonoBehaviour
             collision.transform.parent.tag = "Collected";
             collision.transform.GetComponent<Rigidbody>().useGravity = false;
             collision.transform.GetComponent<Rigidbody>().isKinematic = true;
+
+            catSoundSource.PlayOneShot(catSounds[Random.Range(0, catSounds.Count)]);
 
             //foreach (GameObject child in collision.transform.parent)
             //{

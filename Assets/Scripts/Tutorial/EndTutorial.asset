@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EndTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: Now go out and Catch Em All!
+  tutorialInstructions: Now, I believe you have some cats to catch
   tutorialStepComplete: 0
   isLookAroundTutorial: 0
   tutorialInputList: 00000000
