@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33976223685111332}
   - component: {fileID: 23521377195621546}
   - component: {fileID: 64856392267620814}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Shop_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4207401275094340}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Shop_B_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

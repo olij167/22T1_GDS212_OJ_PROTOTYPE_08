@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4085613477960446}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Fire_department_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 33492394308292534}
   - component: {fileID: 23720414374091438}
   - component: {fileID: 64847346104089800}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Fire_department
   m_TagString: Untagged
   m_Icon: {fileID: 0}

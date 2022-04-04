@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33545616392507590}
   - component: {fileID: 23338079925027170}
   - component: {fileID: 64865604194299092}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Building_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4984302113942590}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Building_D_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33707950889615874}
   - component: {fileID: 23597961784243310}
   - component: {fileID: 64514760569981668}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Parking_checkOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4256327484137102}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Parking_checkOut_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4904285700624236}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Motel_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 33137662198242718}
   - component: {fileID: 23756311536760556}
   - component: {fileID: 64666700389190016}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Motel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

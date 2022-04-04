@@ -13,12 +13,16 @@ public class MainMenuFunctions : MonoBehaviour
 
     public int maxCats = 100000;
 
+    
+
     private void Start()
     {
+        LoadData();
         Cursor.lockState = CursorLockMode.Confined;
 
         catsToCollectText.text = (maxCats - catsReturnedCounter.catsReturned).ToString() + " of them!";
         //currentLevelText.text = "Level " + currentLevel.ToString();
+        
     }
 
     public void SaveGame()
@@ -32,6 +36,13 @@ public class MainMenuFunctions : MonoBehaviour
 
         catsReturnedCounter.catsReturned = data.catsReturned;
         SceneManager.LoadScene(gameScene);
+    }
+
+    public void LoadData()
+    {
+        SaveData data = SaveSystem.Load();
+
+        catsReturnedCounter.catsReturned = data.catsReturned;
     }
 
     public void NewGame()

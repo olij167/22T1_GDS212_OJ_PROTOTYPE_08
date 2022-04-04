@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MagnetRangeTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: The range depends on your level and the amount of cats collected
-  tutorialStepComplete: 0
+  tutorialInstructions: The range depends on your lure level and the amount of cats
+    collected
+  tutorialStepComplete: 1
   isLookAroundTutorial: 0
   tutorialInputList: 

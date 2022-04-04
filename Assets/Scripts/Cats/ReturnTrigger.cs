@@ -33,9 +33,15 @@ public class ReturnTrigger : MonoBehaviour
 
     public AudioClip levelUpSound, catsReturnedSound;
 
+    public PlayerController player;
+    public CamController cam;
+
+    bool gameContinued;
+
 
     void Start()
     {
+        Debug.Log(Application.persistentDataPath);
         catsCollectedUI = ball.catsCollectedUI;
 
         catsReturnedText.text = "Cats Returned: " + catsReturnedCounter.catsReturned.ToString();
@@ -45,12 +51,22 @@ public class ReturnTrigger : MonoBehaviour
 
         levelUpAudioSource = gameObject.GetComponent<AudioSource>();
 
+        if (catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
+        {
+            gameContinued = true;
+        }
 
         nextUpgradeText.text = "Next Level when " + catsRequiredForUpgrade.ToString() + " cats have been returned";
     }
 
     private void Update()
     {
+        if (gameContinued && catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
+        {
+            GameContinued();
+        }
+        else gameContinued = false;
+
         if (popUpUI.activeSelf)
         {
             popUpTimer -= Time.deltaTime;
@@ -72,7 +88,27 @@ public class ReturnTrigger : MonoBehaviour
                 ReturnCats();
             }
 
-           
+            if (catsReturnedCounter.catsReturned < catsRequiredForUpgrade)
+            {
+                if (!levelUpAudioSource.isPlaying)
+                    levelUpAudioSource.PlayOneShot(catsReturnedSound);
+            }
+
+            else //(catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
+            {
+                magnetField.GetComponent<CatMagnet>().magnetRadius = Mathf.Log10(catsReturnedCounter.catsReturned);
+                //magnetField.radius = Mathf.Sqrt((Mathf.PI + catsOnBall) / (4 * Mathf.PI));
+
+                catsRequiredForUpgrade *= 2;
+
+                currentLevel++;
+                fireWorks.Play();
+                levelUpAudioSource.PlayOneShot(levelUpSound);
+                levelText.text = "Lure" + "\n" + "Level " + currentLevel.ToString();
+
+                nextUpgradeText.text = "Next Upgrade at " + catsRequiredForUpgrade.ToString() + " Cats Returned";
+            }
+
         }
 
         magnetField.gameObject.GetComponent<CatMagnet>().attractedCatsList.Clear();
@@ -82,28 +118,6 @@ public class ReturnTrigger : MonoBehaviour
             Destroy(other.gameObject);
             spawnCats.SpawnNewCats();
         }
-
-        if (catsReturnedCounter.catsReturned < catsRequiredForUpgrade)
-        {
-            if (!levelUpAudioSource.isPlaying)
-            levelUpAudioSource.PlayOneShot(catsReturnedSound);
-        }
-        else //(catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
-        {
-            magnetField.GetComponent<CatMagnet>().magnetRadius = Mathf.Log10(catsReturnedCounter.catsReturned);
-            //magnetField.radius = Mathf.Sqrt((Mathf.PI + catsOnBall) / (4 * Mathf.PI));
-
-            catsRequiredForUpgrade *= 2;
-
-            currentLevel++;
-            fireWorks.Play();
-            levelUpAudioSource.PlayOneShot(levelUpSound);
-            levelText.text = "Level " + currentLevel.ToString();
-
-            nextUpgradeText.text = "Next Upgrade at " + catsRequiredForUpgrade.ToString() + " Cats Returned";
-        }
-        
-
     }
 
     public void ReturnCats()
@@ -144,9 +158,12 @@ public class ReturnTrigger : MonoBehaviour
 
         if (catsReturnedCounter.catsReturned >= maxCatsReturned)
         {
-            Camera.main.transform.LookAt(ball.transform);
+            player.enabled = false;
+            cam.enabled = false;
+            Cursor.lockState = CursorLockMode.Confined;
             gameUI.SetActive(false);
             endUI.SetActive(true);
+            
         }
     }
 
@@ -155,10 +172,22 @@ public class ReturnTrigger : MonoBehaviour
 
         popUpUI.SetActive(true);
         popUpText.text = popUps.PopUpsList[Random.Range(0, popUps.PopUpsList.Count)];
-
-
         
+    }
 
-        
+    public void GameContinued()
+    {
+        if (catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
+        {
+            magnetField.GetComponent<CatMagnet>().magnetRadius = Mathf.Log10(catsReturnedCounter.catsReturned);
+
+            catsRequiredForUpgrade *= 2;
+
+            currentLevel++;
+
+            levelText.text = "Lure" + "\n" + "Level " + currentLevel.ToString();
+
+            nextUpgradeText.text = "Next Upgrade at " + catsRequiredForUpgrade.ToString() + " Cats Returned";
+        }
     }
 }

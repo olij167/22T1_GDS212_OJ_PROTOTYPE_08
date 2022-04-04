@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: LevelUpTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: Leveling up increases your base attraction range
-  tutorialStepComplete: 0
+  tutorialInstructions: Leveling up increases your base lure range
+  tutorialStepComplete: 1
   isLookAroundTutorial: 0
-  voiceOver: {fileID: 0}
   tutorialInputList: 

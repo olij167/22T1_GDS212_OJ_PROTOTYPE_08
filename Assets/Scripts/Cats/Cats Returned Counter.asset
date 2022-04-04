@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7391773107766d4ca6cc854668d9fea, type: 3}
   m_Name: Cats Returned Counter
   m_EditorClassIdentifier: 
-  catsReturned: 144
+  catsReturned: 0

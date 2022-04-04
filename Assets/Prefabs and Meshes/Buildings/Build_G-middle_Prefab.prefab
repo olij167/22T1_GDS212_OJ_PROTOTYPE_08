@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4401679083308778}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Build_G-middle_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 33412126709125978}
   - component: {fileID: 23107422737625752}
   - component: {fileID: 64638964645706240}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Build_G-Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

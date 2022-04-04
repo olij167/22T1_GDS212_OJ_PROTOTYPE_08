@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33547670251567076}
   - component: {fileID: 23303384591697792}
   - component: {fileID: 64153517695959376}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Building_I_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4555879849734422}
   - component: {fileID: 33913127012351248}
   - component: {fileID: 23811949482238212}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Fire_escape_leader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4704603093805950}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Building_I_3_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
