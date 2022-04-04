@@ -31,7 +31,7 @@ public class ReturnTrigger : MonoBehaviour
 
     AudioSource levelUpAudioSource;
 
-    public AudioClip levelUpSound;
+    public AudioClip levelUpSound, catsReturnedSound;
 
 
     void Start()
@@ -83,7 +83,12 @@ public class ReturnTrigger : MonoBehaviour
             spawnCats.SpawnNewCats();
         }
 
-        if (catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
+        if (catsReturnedCounter.catsReturned < catsRequiredForUpgrade)
+        {
+            if (!levelUpAudioSource.isPlaying)
+            levelUpAudioSource.PlayOneShot(catsReturnedSound);
+        }
+        else //(catsReturnedCounter.catsReturned >= catsRequiredForUpgrade)
         {
             magnetField.GetComponent<CatMagnet>().magnetRadius = Mathf.Log10(catsReturnedCounter.catsReturned);
             //magnetField.radius = Mathf.Sqrt((Mathf.PI + catsOnBall) / (4 * Mathf.PI));
@@ -97,6 +102,8 @@ public class ReturnTrigger : MonoBehaviour
 
             nextUpgradeText.text = "Next Upgrade at " + catsRequiredForUpgrade.ToString() + " Cats Returned";
         }
+        
+
     }
 
     public void ReturnCats()

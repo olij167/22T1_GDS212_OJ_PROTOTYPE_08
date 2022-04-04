@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: NarrativeTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: Uh Oh! The cats are loose! You better catch them for a better
-    home!
-  tutorialStepComplete: 1
+  tutorialInstructions: Uh Oh! The cats are loose! (100,000 of them!!) Bring them
+    back to the house and we'll send them to a better home
+  tutorialStepComplete: 0
   isLookAroundTutorial: 0
   tutorialInputList: 

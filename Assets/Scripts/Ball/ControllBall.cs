@@ -33,7 +33,8 @@ public class ControllBall : MonoBehaviour
     {
         if (player.transform.position != lastPosition)
         {
-            rb.AddRelativeTorque(player.velocity, ForceMode.Force);
+            Vector3 spinDirection = new Vector3(-player.velocity.x, -player.velocity.y, -player.velocity.z);
+            rb.AddRelativeTorque(spinDirection, ForceMode.Force);
         }
         else rb.angularVelocity = Vector3.zero;
         

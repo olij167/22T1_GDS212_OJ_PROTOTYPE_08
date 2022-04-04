@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CatMagnetTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: Cats will be attracted from certain range
+  tutorialInstructions: Cats will be attracted from a certain range
   tutorialStepComplete: 1
   isLookAroundTutorial: 0
   tutorialInputList: 

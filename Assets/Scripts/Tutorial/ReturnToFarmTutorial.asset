@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ReturnToFarmTutorial
   m_EditorClassIdentifier: 
   tutorialIcon: {fileID: 0}
-  tutorialInstructions: To level up return collected cats to the farm
+  tutorialInstructions: To level up return collected cats to the house
   tutorialStepComplete: 0
   isLookAroundTutorial: 0
   tutorialInputList: 
